@@ -39,10 +39,10 @@ function dom(tag, attr, inner) {
 
 
 function add_link_from_ev () {
-    var path = document.location.pathname;
-    var id = get_book_id(path);
+    let path = document.location.pathname;
+    let id = get_book_id(path);
     if (id) {
-        var rf_url = 'https://book.einverne.info/book/' + id;
+        let rf_url = 'https://book.einverne.info/book/' + id;
         GM_xmlhttpRequest({
             method: "HEAD",
             url: rf_url,
