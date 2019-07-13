@@ -12,6 +12,13 @@
 (function () {
     'use strict';
 
+    let is_valid = location.href.match(/(\d{7,8})/g);
+    if (is_valid == null) {
+        console.log("skip");
+        return
+    }
+    let douban_id = location.href.match(/(\d{7,8})/g)[0];
+
     let title = document.getElementsByTagName("h1")[0].innerText;
     console.log("title is " + title);
 
@@ -89,8 +96,6 @@
         arr.push(tags_info[i].innerText);
     }
     console.log(arr.join("/"));
-
-    let douban_id = location.href.match(/(\d{7,8})/g)[0];
 
     let book_info = {
         "douban_id": douban_id,
