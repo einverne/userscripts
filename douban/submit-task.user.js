@@ -54,7 +54,7 @@
         console.log(price);
     }
 
-    let page_cnt = '';
+    let page_cnt = 0;
     if (info.search(/页数:/g) >= 0) {
         page_cnt = info.match(/页数:\s+(.*)/g)[0].replace('页数:', '').trim();
         console.log(page_cnt);
@@ -101,7 +101,7 @@
         "translator": translator,
         "publisher": publisher,
         "publish_time": publish_year,
-        "page_num": page_cnt,
+        "page_num": parseInt(page_cnt),
         "book_desc": book_intro,
         "author_desc": author_intro,
         "score": score,
