@@ -97,11 +97,16 @@
     }
     console.log(arr.join("/"));
 
+    let douban_link = location.href;
+    if (location.href.includes("?")) {
+        douban_link = location.href.substring(0, location.href.indexOf("?"));
+    }
+
     let book_info = {
         "douban_id": douban_id,
         "title": title,
         "subtitle": sub_title,
-        "douban_link": location.href,
+        "douban_link": douban_link,
         "author": author,
         "translator": translator,
         "publisher": publisher,
