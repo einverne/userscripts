@@ -28,7 +28,13 @@ function map_rating(rating) {
 function build_comment(commentItem) {
     if (typeof (commentItem) == 'undefined' || commentItem === undefined || !commentItem) return undefined
     let comment_id = commentItem.getAttribute('data-cid')
-    let content = commentItem.querySelector('.short').innerHTML
+    let shortNode = commentItem.querySelector('.short')
+    if (typeof (shortNode) != 'undefined' && shortNode != null) {
+        content = shortNode.innerHTML
+    } else {
+        console.log('comment is null ' + commentItem)
+        return undefined
+    }
     let create_time = commentItem.querySelector('.comment-time').getAttribute('title')
     let user_name = commentItem.querySelector('.comment-info a').innerHTML
     let user_link = commentItem.querySelector('.comment-info a')['href']
