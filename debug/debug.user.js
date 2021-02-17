@@ -13,6 +13,7 @@
 // @grant        GM_getResourceText
 // @require      https://unpkg.com/dexie@latest/dist/dexie.js
 // @require      file:///home/einverne/Git/userscripts/douban_export/douban_exporter.user.js
+// @require      file:///home/einverne/Git/userscripts/douban/submit-movie.user.js
 // ==/UserScript==
 
 (function () {
