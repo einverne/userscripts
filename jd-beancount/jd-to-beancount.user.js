@@ -70,7 +70,7 @@
                 if (a.querySelectorAll('[id*="track"]').length === 1) {
                     return `
 ${t('.dealtime').split(' ')[0]} * "京东 ${t('.number')}" "${t('.p-name')}"
-  date: ${t('.dealtime')}
+  date: "${t('.dealtime')}"
   ${expenseAccount}   ${t('.amount').match(/([0-9.]+)/)[1]} CNY
   Liabilities:CreditCard:BOC
 `.trim()
