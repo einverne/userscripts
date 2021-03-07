@@ -70,7 +70,7 @@ function build_review(reviewItem) {
     }
     let create_time = reviewItem.querySelector('.main-meta').innerText
     let short_content = reviewItem.querySelector('.short-content').innerText.trim()
-    short_content = short_content.replace('这篇影评可能有剧透', '').replace('\(展开\)', '').trim()
+    short_content = short_content.replace('这篇影评可能有剧透', '').replace('这篇剧评可能有剧透', '').replace('\(展开\)', '').trim()
     let title = reviewItem.querySelector('.main-bd h2 a').innerText.trim()
     return {
         'id': review_id,
@@ -132,6 +132,7 @@ window.addEventListener('load', function () {
 
         let image = document.querySelector('#mainpic > a.nbgnbg > img').src;
         let info = document.getElementById("info").innerText;
+        console.log(info)
 
         let score = document.getElementsByClassName("ll rating_num")[0].innerText;
 
@@ -159,6 +160,11 @@ window.addEventListener('load', function () {
         if (info.search(/制片国家\/地区:/g) >= 0) {
             country = info.match(/制片国家\/地区:\s+(.*)/g)[0].replace('制片国家\/地区:', '').trim();
         }
+        let official_site = '';
+        if (info.search(/官方网站:/g) >= 0) {
+            official_site = info.match(/官方网站:\s+(.*)/g)[0].replace('官方网站:', '').trim();
+        }
+        console.log(official_site)
         let language = '';
         if (info.search(/语言:/g) >= 0) {
             language = info.match(/语言:\s+(.*)/g)[0].replace('语言:', '').trim();
@@ -166,6 +172,9 @@ window.addEventListener('load', function () {
         let release_date = '';
         if (info.search(/上映日期:/g) >= 0) {
             release_date = info.match(/上映日期:\s+(.*)/g)[0].replace('上映日期:', '').trim()
+        }
+        if (info.search(/首播:/g) >= 0) {
+            release_date = info.match(/首播:\s+(.*)/g)[0].replace('首播:', '').trim()
         }
 
         let length = '';
