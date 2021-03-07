@@ -14,6 +14,7 @@
 // @require      https://unpkg.com/dexie@latest/dist/dexie.js
 // @require      file:///home/einverne/Git/userscripts/douban_export/douban_exporter.user.js
 // @require      file:///home/einverne/Git/userscripts/douban/submit-movie.user.js
+// @require      file:///home/einverne/Git/userscripts/jd-beancount/jd.user.js
 // ==/UserScript==
 
 (function () {
