@@ -187,6 +187,11 @@ window.addEventListener('load', function () {
             release_date = info.match(/首播:\s+(.*)/g)[0].replace('首播:', '').trim()
         }
 
+        let episode_count = 0;
+        if (info.search(/集数:/g) >= 0) {
+            episode_count = info.match(/集数:\s+(.*)/g)[0].replace('集数:', '').trim()
+        }
+
         let length = '';
         if (info.search(/片长:/g) >= 0) {
             length = info.match(/片长:\s+(\d+)/g)[0].replace('片长:', '').trim();
@@ -245,6 +250,7 @@ window.addEventListener('load', function () {
             "image": image,
             "official_site": official_site,
             "screenshot": screenshot,
+            "episode_count": episode_count,
             "tags": tags.join('/'),
             "comments": comments,
             "reviews": reviews
