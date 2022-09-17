@@ -41,8 +41,8 @@ function build_comment(commentItem) {
     let ratingNode = commentItem.querySelector('.rating');
     let rating = 0
     if (typeof (ratingNode) != 'undefined' && ratingNode != null) {
-        let rating = ratingNode.getAttribute('title')
-        rating = map_rating(rating)
+        let ratingT = ratingNode.getAttribute('title')
+        rating = map_rating(ratingT)
     }
 
     let vote_count = commentItem.querySelector('.vote-count').innerHTML
@@ -130,6 +130,8 @@ window.addEventListener('load', function () {
         release_year = release_year.replace('(', '').replace(')', '').trim()
         console.log("year is " + release_year)
 
+        let caption = title + ' (' + release_year + ')';
+
         let image = document.querySelector('#mainpic > a.nbgnbg > img').src;
         let info = document.getElementById("info").innerText;
         console.log(info)
@@ -215,6 +217,7 @@ window.addEventListener('load', function () {
         let movie_info = {
             "douban_id": douban_id,
             "title": title,
+            "caption": caption,
             "director": director,
             "screenwriter": screenwriter,
             "actor": actor,
