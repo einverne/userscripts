@@ -233,6 +233,7 @@ window.addEventListener('load', function () {
             "score": score,
             "douban_link": douban_link,
             "image": image,
+            "official_site": official_site,
             "tags": tags.join('/'),
             "comments": comments,
             "reviews": reviews
