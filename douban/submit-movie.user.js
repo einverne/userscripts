@@ -109,6 +109,14 @@ function get_comment_list(douban_id) {
     return comments
 }
 
+function get_screenshot() {
+    let screen = []
+    document.querySelector('.related-pic .related-pic-bd').querySelectorAll('img').forEach(function (item) {
+        screen.push(item.src)
+    })
+    return screen.join(',')
+}
+
 window.addEventListener('load', function () {
 
 
@@ -211,6 +219,8 @@ window.addEventListener('load', function () {
             tags.push(tagNodes[i].innerHTML)
         }
 
+        let screenshot = get_screenshot();
+
         let comments = get_comment_list(douban_id);
         let reviews = get_reviews(douban_id);
 
@@ -234,6 +244,7 @@ window.addEventListener('load', function () {
             "douban_link": douban_link,
             "image": image,
             "official_site": official_site,
+            "screenshot": screenshot,
             "tags": tags.join('/'),
             "comments": comments,
             "reviews": reviews
