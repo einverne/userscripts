@@ -259,7 +259,7 @@ window.addEventListener('load', function () {
         console.log(movie_info);
         GM_xmlhttpRequest({
             method: "POST",
-            url: "https://book.einverne.info/movie/save",
+            url: "https://api.techfm.club/movie/save",
             data: JSON.stringify(movie_info),
             headers: {
                 "Content-Type": "application/json"
