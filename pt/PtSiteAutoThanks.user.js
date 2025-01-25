@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name            PT站点自动感谢
 // @description     浏览PT站资源详情页面时使用 AJAX 方式在后台自动感谢发布者。
-// @namespace       https://greasyfork.org/zh-CN/scripts/4736-pt%E7%AB%99%E8%87%AA%E5%8A%A8%E6%84%9F%E8%B0%A2
+// @namespace       https://github.com/einverne/userscripts
+// @namespace       https://greasyfork.org/zh-CN/scripts/4736
 // @version         2024.7.19
 // @match         *://*/details.php*
 // @match         *://totheglory.im/t/*
 // @icon
-// @downloadURL https://update.greasyfork.org/scripts/4736/PT%E7%AB%99%E8%87%AA%E5%8A%A8%E6%84%9F%E8%B0%A2.user.js
-// @updateURL https://update.greasyfork.org/scripts/4736/PT%E7%AB%99%E8%87%AA%E5%8A%A8%E6%84%9F%E8%B0%A2.meta.js
+// @downloadURL https://github.com/einverne/userscripts/raw/refs/heads/master/pt/PtSiteAutoThanks.user.js
+// @updateURL https://github.com/einverne/userscripts/raw/refs/heads/master/pt/PtSiteAutoThanks.user.js
 // ==/UserScript==
 
 (function () {
