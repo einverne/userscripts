@@ -32,7 +32,7 @@
       }
     }
 
-    window.addEventListener('load', thanks, false);
+    thanks();
   }
 
 })();
